@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block context %}
+<form method = 'post' class="form-signin" enctype="multipart/form-data"style="max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;">
+<h2 class="form-signin-heading" style="  margin-bottom: 10px;">请登录</h2>
+    {% csrf_token %}
+    <input style="  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;"id="id_username" maxlength="100" name="username" type="text" class="form-control" placeholder="用户名" required="" autofocus="">
+    <input style="  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;"id="id_password" name="password" type="password" class="form-control" placeholder="密码" required="">
+    <button  class="btn btn-lg btn-primary btn-block"type="submit" value = "ok" />登录</button>
+    <button class="btn btn-lg btn-primary btn-block" href="/online/regist/">注册</a>
+</form>
+<br>
+{% endblock %}

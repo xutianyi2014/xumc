@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block context %}
+{% ifequal username '' %}
+<h1>没有登录</h1>
+{% else %} 
+<h1>welcome {{username}} !</h1>
+{% endifequal %}
+<br>
+{% endblock %}
